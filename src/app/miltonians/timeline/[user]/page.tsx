@@ -1,14 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default async function Page({ params }: { params: { user: string } }) {
-  const { user } = await params;
+// type tParams = Promise<{ user: string[] }>;
+
+export default async function Page( ) {
+  // const { user } = await params;
 
   return (
     <div>
     <div className="space-y-4 mb-4">
-      <h1 className="font-medium">Miltonian {user.charAt(0).toUpperCase() + user.slice(1) + `'s`} Timeine</h1>
-      
+      {/* <h1 className="font-medium">Miltonian {user?.charAt(0).toUpperCase() + user.slice(1) + `'s`} Timeine</h1> */}
+      <h1 className="font-medium">Miltonian {`test`} Timeine</h1>
     </div>
     <div>
       <div className="ps-2 my-2 first:mt-0">
@@ -24,6 +26,8 @@ export default async function Page({ params }: { params: { user: string } }) {
               className="shrink-0 size-7 rounded-full"
               src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80"
               alt="Avatar"
+              width={38}
+              height={38}
             />
           </div>
         </div>

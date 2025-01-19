@@ -129,11 +129,13 @@ export default function Miltonians() {
                     </td>
                     <td className="size-px whitespace-nowrap">
                       <div className="ps-6 lg:ps-3 xl:ps-2 pe-6 py-3">
-                        <div className="flex items-center gap-x-3">
+                        <div className="flex items-center gap-x-3 relative">
                           <Image
                             className="inline-block size-[38px] rounded-full"
                             src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=320&amp;h=320&amp;q=80"
                             alt="Avatar"
+                            width={38}
+                            height={38}
                           />
                           <div className="grow">
                             <Link href='./miltonians/profile/durai'><span className="block text-sm font-semibold text-gray-800 dark:text-neutral-200">
@@ -222,11 +224,13 @@ export default function Miltonians() {
                     </td>
                     <td className="size-px whitespace-nowrap">
                       <div className="ps-6 lg:ps-3 xl:ps-2 pe-6 py-3">
-                        <div className="flex items-center gap-x-3">
+                        <div className="flex items-center gap-x-3 relative">
                           <Image
                             className="inline-block size-[38px] rounded-full"
                             src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=320&amp;h=320&amp;q=80"
                             alt="Avatar"
+                            width={38}
+                            height={38}
                           />
                           <div className="grow">
                             <Link href="./miltonians/profile/manju">
