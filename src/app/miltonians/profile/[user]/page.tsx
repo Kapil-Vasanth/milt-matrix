@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default async function ProfilePage({ params }: { params: { user: string } }) {
-  const { user } = await params;
+  const { user } = params;
 
   return (
     <div className="max-w-lg w-full">
