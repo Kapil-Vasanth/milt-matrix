@@ -1,4 +1,8 @@
 "use client";
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { useCallback } from 'react';
 import {
     ConnectionLineType,
@@ -10,6 +14,8 @@ import {
 import CustomNode from '@/app/components/CustomNode';
 import { initialEdges, initialNodes } from '@/app/miltonians/profile/[user]/tree/initialElements';
 import dagre from '@dagrejs/dagre';
+
+
 
 const dagreGraph = new dagre.graphlib.Graph().setDefaultEdgeLabel(() => ({}));
 
@@ -62,6 +68,7 @@ const getLayoutedElements = (nodes: any[], edges: any[], direction = 'TB') => {
     return { nodes: newNodes, edges };
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
     initialNodes,
     initialEdges,

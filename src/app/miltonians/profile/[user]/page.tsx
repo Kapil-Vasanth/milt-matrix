@@ -25,7 +25,7 @@ export default async function ProfilePage({ params }: { params: { user: string }
     <div className="pb-4 border-b-2">
     <h1 className="text-sm text-gray-500">Director Chairman</h1>
       <h2 className="font-semibold">Mission Statement</h2>
-      <p className="text-sm text-gray-500 dark:text-neutral-500 italic">"Let the world be better place because I came Here"</p>
+      <p className="text-sm text-gray-500 dark:text-neutral-500 italic">{`"Let the world be better place because I came Here"`}</p>
     </div>
 
     <div className="py-4">
