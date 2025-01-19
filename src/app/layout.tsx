@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClerkProvider, SignIn, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { ClerkProvider, SignIn, SignedIn, SignedOut } from '@clerk/nextjs'
 import PrelineScript from "./components/PrelineScript";
 import Navigation from "./components/Navigation";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -32,7 +32,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <SignedIn>
+          <SignedIn >
             <div className="h-screen flex flex-col dark:bg-neutral-800 dark:border-neutral-700 bg-[url('https://preline.co/assets/svg/component/hero-gradient.svg')]">
               <Navigation />
               <main className='max-w-screen-lg m-auto w-full  grow flex justify-center mt-6'>{children}</main>

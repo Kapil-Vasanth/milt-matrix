@@ -130,7 +130,7 @@ export default function Miltonians() {
                     <td className="size-px whitespace-nowrap">
                       <div className="ps-6 lg:ps-3 xl:ps-2 pe-6 py-3">
                         <div className="flex items-center gap-x-3">
-                          <img
+                          <Image
                             className="inline-block size-[38px] rounded-full"
                             src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=320&amp;h=320&amp;q=80"
                             alt="Avatar"
@@ -223,7 +223,7 @@ export default function Miltonians() {
                     <td className="size-px whitespace-nowrap">
                       <div className="ps-6 lg:ps-3 xl:ps-2 pe-6 py-3">
                         <div className="flex items-center gap-x-3">
-                          <img
+                          <Image
                             className="inline-block size-[38px] rounded-full"
                             src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=320&amp;h=320&amp;q=80"
                             alt="Avatar"

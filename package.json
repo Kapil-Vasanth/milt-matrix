@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.9.9",
+    "@dagrejs/dagre": "^1.1.4",
     "@xyflow/react": "^12.3.6",
     "next": "15.1.4",
     "preline": "^2.7.0",

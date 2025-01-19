@@ -8,13 +8,13 @@ function Navigation() {
             <header className="flex flex-wrap  md:justify-start md:flex-nowrap z-50 w-full bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700">
                 <nav className="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center gap-x-1">
-                        <a
+                        <Link
                             className="flex-none text-black focus:outline-none focus:opacity-80 dark:text-white bg-clip-text bg-gradient-to-l from-purple-400 to-blue-600 text-transparent text-xl font-semibold"
                             href="/"
                             aria-label="Brand"
                         >
                             Milt Assc.
-                        </a>
+                        </Link>
 
                         <button
                             type="button"

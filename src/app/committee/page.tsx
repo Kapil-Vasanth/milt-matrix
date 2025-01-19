@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Page() {
     return (
         <div className="w-full bg-white rounded-lg shadow-md dark:bg-neutral-800">
@@ -18,7 +20,7 @@ export default function Page() {
                     <div className="w-full max-w-2xl mx-auto pt-10 md:pt-8 px-4 sm:px-6 lg:px-8">
                         <div className="flex items-center gap-x-3">
                             <div className="shrink-0">
-                                <img className="shrink-0 size-16 rounded-full" src="https://images.unsplash.com/photo-1556402514-ab77f15d1ba1?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" />
+                                <Image className="shrink-0 size-16 rounded-full" src="https://images.unsplash.com/photo-1556402514-ab77f15d1ba1?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Avatar" />
                             </div>
 
                             <div className="grow">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Page({ params }: { params: { user: string } }) {
   const { user } = await params;
@@ -6,7 +7,7 @@ export default async function Page({ params }: { params: { user: string } }) {
   return (
     <div>
     <div className="space-y-4 mb-4">
-      <h1 className="font-medium">Miltonian {user.charAt(0).toUpperCase() + user.slice(1)}'s Timeine</h1>
+      <h1 className="font-medium">Miltonian {user.charAt(0).toUpperCase() + user.slice(1) + `'s`} Timeine</h1>
       
     </div>
     <div>
@@ -19,7 +20,7 @@ export default async function Page({ params }: { params: { user: string } }) {
       <div className="flex gap-x-3">
         <div className="relative last:after:hidden after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-400 dark:after:bg-neutral-700">
           <div className="relative z-10 size-7 flex justify-center items-center">
-            <img
+            <Image
               className="shrink-0 size-7 rounded-full"
               src="https://images.unsplash.com/photo-1659482633369-9fe69af50bfb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=3&w=320&h=320&q=80"
               alt="Avatar"
@@ -50,7 +51,7 @@ export default async function Page({ params }: { params: { user: string } }) {
             Attended Milt Annual Foundation Day
           </h3>
           <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-            Gave a talk on "How to be a successful entrepreneur"
+            {`Gave a talk on "How to be a successful entrepreneur"`}
           </p>
           <button
             type="button"
@@ -94,7 +95,7 @@ export default async function Page({ params }: { params: { user: string } }) {
             Attended Satsung
           </h3>
           <p className="mt-1 text-sm text-gray-600 dark:text-neutral-400">
-            Made a few talks on "spirituality and modern life"
+            {`Made a few talks on "spirituality and modern life"`}
           </p>
           <button
             type="button"
