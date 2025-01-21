@@ -10,7 +10,7 @@ export default async function ProfilePage(
   const { user } = await params;
 
   return (
-    <div className="max-w-lg w-full">
+    <div className="max-w-lg w-full sm:p-4">
     <div className="space-y-4 mb-4 flex gap-2 items-center">
         <div className="z-10 size-12 flex justify-center items-center">
             <Image

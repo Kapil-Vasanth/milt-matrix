@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <div className="max-w-screen-lg m-auto w-full  grow flex justify-center mt-6">
+    <div className="max-w-screen-lg m-auto w-full  grow flex justify-center mt-6 sm:p-2">
           <div className="w-full p-4 min-h-40 dark:text-white">
             <h2 className="truncate text-2xl font-medium tracking-tight mb-2">
              Hi Graha Durai

@@ -35,7 +35,7 @@ export default function RootLayout({
           <SignedIn >
             <div className="h-screen flex flex-col dark:bg-neutral-800 dark:border-neutral-700 bg-[url('https://preline.co/assets/svg/component/hero-gradient.svg')]">
               <Navigation />
-              <main className='max-w-screen-lg m-auto w-full  grow flex justify-center mt-6'>{children}</main>
+              <main className='max-w-screen-lg m-auto w-full  grow flex justify-center mt-6 p-4'>{children}</main>
             </div>
           </SignedIn>
 

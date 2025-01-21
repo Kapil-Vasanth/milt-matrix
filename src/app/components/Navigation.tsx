@@ -58,6 +58,7 @@ function Navigation() {
                             </svg>
                             <span className="sr-only">Toggle navigation</span>
                         </button>
+
                     </div>
 
                     <div
@@ -69,9 +70,15 @@ function Navigation() {
                             <div className="py-2 md:py-0  flex flex-col md:flex-row md:items-center gap-0.5 md:gap-1">
                                 <div className="grow">
                                     <div className="flex flex-col md:flex-row md:justify-end md:items-center gap-0.5 md:gap-1">
+                                        <Link
+                                            className="font-medium text-sm text-gray-800 focus:outline-none focus:text-blue-600 dark:text-blue-500 dark:focus:text-blue-500"
+                                            href={`/organization`}
+                                        >
+                                            Organization
+                                        </Link>
                                         <SignedOut>
                                             <SignInButton>
-                                                
+
                                             </SignInButton>
                                         </SignedOut>
                                         <SignedIn>
@@ -103,7 +110,7 @@ function Navigation() {
                             aria-controls="hs-nav-secondary"
                             aria-label="Toggle navigation"
                         >
-                            Overview
+                            Overviews
                             <svg
                                 className="hs-dropdown-open:rotate-180 shrink-0 size-4 ms-1"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +133,7 @@ function Navigation() {
                         className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
                     >
                         <div className="py-2 sm:py-0 flex flex-col sm:flex-row sm:justify-end gap-y-2 sm:gap-y-0 sm:gap-x-6">
-                            
+
                             <Link
                                 className="font-medium text-sm text-gray-800 focus:outline-none focus:text-blue-600 dark:text-blue-500 dark:focus:text-blue-500"
                                 href={`/`}
@@ -134,11 +141,12 @@ function Navigation() {
                                 Overview
                             </Link>
 
+
                             <Link
                                 className="font-medium text-sm text-gray-800 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-500 dark:focus:text-blue-500"
                                 href="/miltonians"
                             >
-                                Miltonians
+                                Miltonian
                             </Link>
                             <Link
                                 className="font-medium text-sm text-gray-800 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-500 dark:focus:text-blue-500"
