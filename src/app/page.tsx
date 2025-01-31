@@ -1,11 +1,16 @@
+'use client';
+import { useUser } from '@clerk/nextjs';
 
 export default function Home() {
+  const { isSignedIn, user } = useUser();
+
+
+
   return (
     <div className="max-w-screen-lg m-auto w-full  grow flex justify-center mt-6 sm:p-2">
           <div className="w-full p-4 min-h-40 dark:text-white">
             <h2 className="truncate text-2xl font-medium tracking-tight mb-2">
-             Hi Graha Durai
-            </h2>
+             Hi {user?.fullName || ''}! Welcome to MILT </h2>
             <div className="text-base text-secondary mb-2">
               <p>
                 Would you like to look at your progress

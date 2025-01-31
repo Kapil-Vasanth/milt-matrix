@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClerkProvider, SignIn, SignedIn, SignedOut } from '@clerk/nextjs'
+import { ClerkProvider, SignUp, SignedIn, SignedOut } from '@clerk/nextjs'
 import PrelineScript from "./components/PrelineScript";
 import Navigation from "./components/Navigation";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -41,7 +41,7 @@ export default function RootLayout({
 
           <SignedOut>
             <div className="flex justify-center min-h-screen items-center">
-              <SignIn />
+              <SignUp />
             </div>
           </SignedOut>
           <PrelineScript />
