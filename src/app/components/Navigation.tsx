@@ -1,8 +1,12 @@
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { currentUser } from '@clerk/nextjs/server'
+
 import Link from "next/link";
 import React from "react";
 
-function Navigation() {
+async function Navigation() {
+    const user = await currentUser()
+
     return (
         <div className="mb-2 border-b ">
             <header className="flex flex-wrap  md:justify-start md:flex-nowrap z-50 w-full bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700">
@@ -99,7 +103,7 @@ function Navigation() {
                     <div className="flex justify-between items-center gap-x-3">
                         <div className="grow">
                             <span className="font-semibold whitespace-nowrap text-gray-800 dark:text-neutral-200">
-                                Welcome Durai
+                                Welcome {user?.firstName?.toUpperCase() || 'Guest'}
                             </span>
                         </div>
 
@@ -146,7 +150,7 @@ function Navigation() {
                                 className="font-medium text-sm text-gray-800 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-500 dark:focus:text-blue-500"
                                 href="/miltonians"
                             >
-                                Miltonian
+                                Miltonians
                             </Link>
                             <Link
                                 className="font-medium text-sm text-gray-800 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-500 dark:focus:text-blue-500"
@@ -156,9 +160,9 @@ function Navigation() {
                             </Link>
                             <Link
                                 className="font-medium text-sm text-gray-800 hover:text-blue-600 focus:outline-none focus:text-blue-600 dark:text-neutral-200 dark:hover:text-blue-500 dark:focus:text-blue-500"
-                                href={`/events`}
+                                href={`/progress`}
                             >
-                                Events
+                                Progress
                             </Link>
                         </div>
                     </div>

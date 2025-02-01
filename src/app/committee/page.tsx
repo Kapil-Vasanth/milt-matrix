@@ -48,83 +48,31 @@ export default function Page() {
                                 />
                             </div>
 
-                            <div className="mb-4">
-                                <label className="block text-sm font-medium dark:text-white mb-2">
-                                    <span>Email address</span>
-                                </label>
-                                <input
-                                    type="email"
-                                    id="hs-hero-email-2"
-                                    readOnly
-                                    value="eliana@gmail.com"
-                                    className="py-3 px-4 block border w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                    placeholder="Email address"
-                                />
-                            </div>
+                            
+
 
                             <div className="mb-4">
                                 <label
                                     htmlFor="hs-hero-password-2"
                                     className="block text-sm font-medium dark:text-white mb-2"
                                 >
-                                    <span>Password</span>
+                                    <span>Description</span>
                                 </label>
-                                <input
-                                    type="email"
-                                    name="hs-hero-password-2"
-                                    readOnly
-                                    value="#$(*99fasdf#"
-                                    className="py-3 px-4 block border w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                    placeholder="Password"
-                                />
-                            </div>
-
-                            <div className="mb-4">
-                                <label
-                                    htmlFor="hs-hero-password-2"
-                                    className="block text-sm font-medium dark:text-white mb-2"
-                                >
-                                    <span>Role</span>
-                                </label>
-                                <select
-                                    name="role"
-                                    className="py-3 px-4 block border w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                >
-                                    <option value="">Select Role</option>
-                                    <option value="manager">manager</option>
-                                    <option value="user">user</option>
-                                </select>
-                            </div>
-
-                            <div className="mb-4">
-                                <label
-                                    htmlFor="hs-hero-password-2"
-                                    className="block text-sm font-medium dark:text-white mb-2"
-                                >
-                                    <span>Organization</span>
-                                </label>
-                                <select
-                                    name="role"
-                                    className="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                >
-                                    <option value="">Select Organization</option>
-                                    <option value="manager">org-1</option>
-                                    <option value="user">org-2</option>
-                                </select>
+                                <textarea className='block text-sm font-medium dark:text-white mb-2 border w-full h-32' name="desc" id="desc"></textarea>
                             </div>
 
                             <div className="flex gap-2 justify-end">
                                 <button
                                     type="submit"
-                                    className="py-3 px-4 w-fit inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                    className="py-2 px-2 w-fit inline-flex justify-center items-center gap-x-2 text-xs font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                                 >
-                                    Update User
+                                    Update Committee
                                 </button>
                                 <button
                                     type="button"
-                                    className="py-3 px-4 w-fit inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-red-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                    className="py-2 px-2 w-fit inline-flex justify-center items-center gap-x-2 text-xs font-medium rounded-lg border border-transparent bg-red-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                                 >
-                                    Delete User
+                                    Delete Committee
                                 </button>
                             </div>
                         </form>
@@ -132,7 +80,7 @@ export default function Page() {
                 </div>
                 <div id="basic-tabs-2" className="hidden" role="tabpanel" aria-labelledby="basic-tabs-item-2">
                     <p className="text-gray-500 dark:text-neutral-400 mb-4">
-                        List of Members
+                        List of Members for ECT Committee
                     </p>
                     <ul className="max-w-xs flex flex-col">
                         <li className="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border border-gray-200 text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">

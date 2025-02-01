@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClerkProvider, SignUp, SignedIn, SignedOut } from '@clerk/nextjs'
+import { ClerkProvider, SignUp, SignedIn, SignedOut, GoogleOneTap } from '@clerk/nextjs'
 import PrelineScript from "./components/PrelineScript";
 import Navigation from "./components/Navigation";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -32,6 +32,8 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <GoogleOneTap />
+
           <SignedIn >
             <div className="h-screen flex flex-col dark:bg-neutral-800 dark:border-neutral-700 bg-[url('https://preline.co/assets/svg/component/hero-gradient.svg')]">
               <Navigation />

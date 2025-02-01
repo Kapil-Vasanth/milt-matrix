@@ -25,7 +25,7 @@ export default async function ProfilePage(
             <div className="flex justify-between w-full items-center">
                 {/* <h1 className="font-medium">{user.charAt(0).toUpperCase() + user.slice(1)}</h1> */}
                 <h1 className="font-medium">{'Graha Durai'}</h1>
-                <Link href={`${user}/tree`} className="text-xs border border-gray-500 px-4 py-2 rounded-lg">Family Tree</Link>
+                <Link href={`../timeline/${user}`} className="text-xs border border-gray-500 px-4 py-2 rounded-lg">Timeline</Link>
             </div>
             <span className="block text-sm text-gray-500 dark:text-neutral-500">durai@gmail.com</span>
         </div>
