@@ -25,10 +25,10 @@ export default function Page() {
 
                             <div className="grow">
                                 <h1 className="text-lg font-medium text-gray-800 dark:text-neutral-200">
-                                    ECT Committee
+                                    EC Committee
                                 </h1>
                                 <p className="text-sm text-gray-600 dark:text-neutral-400">
-                                    Ect committee is a group of people who are responsible for managing the organization
+                                    EC committee is a group of people who are responsible for managing the organization
                                 </p>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ export default function Page() {
                 </div>
                 <div id="basic-tabs-2" className="hidden" role="tabpanel" aria-labelledby="basic-tabs-item-2">
                     <p className="text-gray-500 dark:text-neutral-400 mb-4">
-                        List of Members for ECT Committee
+                        List of Members for EC Committee
                     </p>
                     <ul className="max-w-xs flex flex-col">
                         <li className="inline-flex items-center gap-x-2 py-3 px-4 text-sm font-medium bg-white border border-gray-200 text-gray-800 -mt-px first:rounded-t-lg first:mt-0 last:rounded-b-lg dark:bg-neutral-900 dark:border-neutral-700 dark:text-white">
