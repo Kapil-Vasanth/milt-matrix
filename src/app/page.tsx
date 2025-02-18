@@ -1,10 +1,12 @@
 'use client';
-import { useUser } from '@clerk/nextjs';
+import { useUser, useSession } from '@clerk/nextjs';
+
 
 export default function Home() {
   const { user } = useUser();
-
-
+  // The `useSession()` hook will be used to get the Clerk `session` object
+	const { session } = useSession()
+	
 
   return (
     <div className="max-w-screen-lg m-auto w-full  grow flex justify-center mt-6 sm:p-2">
