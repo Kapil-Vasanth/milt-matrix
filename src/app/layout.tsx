@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ClerkProvider, SignUp, SignedIn, SignedOut, GoogleOneTap } from '@clerk/nextjs'
-import PrelineScript from "./components/PrelineScript";
 import Navigation from "./components/Navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -46,7 +45,6 @@ export default function RootLayout({
               <SignUp />
             </div>
           </SignedOut>
-          <PrelineScript />
         </body>
       </html>
     </ClerkProvider>

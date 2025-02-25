@@ -1,12 +1,9 @@
 import { createClerkClient, User } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
-import { CreateUserForm } from "@/components/CreateUserForm";
+import CreateUserForm from "../components/CreateUserForm";
 
 const clerkClient = createClerkClient({ secretKey: process.env.CLERK_SECRET_KEY })
-
-
-
 
 export default async function Miltonians() {
   const userList = await clerkClient.users.getUserList({ limit: 100 })
@@ -15,13 +12,11 @@ export default async function Miltonians() {
     users = userList.data
   }
 
-  
-
-
   return (
     <div className="-m-1.5 overflow-auto w-full min-h-[30rem] ">
       <div className="flex flex-col">
         <div className="-m-1.5 overflow-x-auto">
+      
           <div className="p-1.5 min-w-full inline-block align-middle">
             <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-neutral-800 dark:border-neutral-700">
               <div className="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
@@ -35,35 +30,7 @@ export default async function Miltonians() {
                 </div>
 
                 <div>
-                  <button
-                    className="inline-flex gap-x-2"
-                    aria-haspopup="dialog"
-                    aria-expanded="false"
-                    aria-controls="hs-slide-down-animation-modal"
-                    data-hs-overlay="#hs-slide-down-animation-modal"
-                  >
-                    <span
-                      className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-
-                    >
-                      <svg
-                        className="shrink-0 size-4"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5v14"></path>
-                      </svg>
-                      Add user
-                    </span>
-                  </button>
+                <CreateUserForm />
                 </div>
               </div>
 
@@ -295,8 +262,9 @@ export default async function Miltonians() {
 
       {/* Modal for creating new User */}
       
-          
-      <CreateUserForm />
+     
+
+      
         
     </div>
   );

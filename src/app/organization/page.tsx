@@ -1,45 +1,4 @@
-
-"use client";
-import React, { useCallback } from 'react';
-import {
-    Background,
-    ReactFlow,
-    useNodesState,
-    useEdgesState,
-    addEdge,
-    Controls,
-} from '@xyflow/react';
-import '@xyflow/react/dist/style.css';
-const initialNodes = [
-    {
-        id: 'hidden-1',
-        type: 'input',
-        data: { label: 'Chairman' },
-        position: { x: 250, y: 5 },
-    },
-    { id: 'hidden-2', data: { label: 'President' }, position: { x: 100, y: 100 } },
-    { id: 'hidden-3', data: { label: 'Vice President' }, position: { x: 400, y: 100 } },
-    { id: 'hidden-4', data: { label: 'ECT Committee' }, position: { x: 400, y: 200 } },
-];
-
-const initialEdges = [
-    { id: 'hidden-e1-2', source: 'hidden-1', target: 'hidden-2' },
-    { id: 'hidden-e1-3', source: 'hidden-1', target: 'hidden-3' },
-    { id: 'hidden-e3-4', source: 'hidden-3', target: 'hidden-4' },
-];
-
-
 const Organization = () => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-    const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-    
-    const onConnect = useCallback(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (params: any) => setEdges((els) => addEdge(params, els)),
-        [],
-    );
-
    
     return (
         <div className="flex flex-col gap-y-2 w-full">
@@ -49,20 +8,7 @@ const Organization = () => {
             </p>
 
             <div className='border w-full  h-[400px] lg:h-[500px]'>
-                <ReactFlow
-                    nodes={nodes}
-                    edges={edges}
-                    onNodesChange={onNodesChange}
-                    onEdgesChange={onEdgesChange}
-                    onConnect={onConnect}
-                    fitView
-                    style={{ backgroundColor: "#F7F9FB" }}
-                >
-                    <Controls />
-
-                    
-                    <Background />
-                </ReactFlow>
+              
             </div>
         </div>
     );

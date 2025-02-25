@@ -1,11 +1,9 @@
 'use client';
-import { useUser, useSession } from '@clerk/nextjs';
+import { useUser } from '@clerk/nextjs';
 
 
 export default function Home() {
   const { user } = useUser();
-  // The `useSession()` hook will be used to get the Clerk `session` object
-	const { session } = useSession()
 	
 
   return (
@@ -13,8 +11,8 @@ export default function Home() {
           <div className="w-full p-4 min-h-40 dark:text-white">
             <h2 className="truncate text-2xl font-medium tracking-tight mb-2">
              Hi {user?.firstName || ''}! Welcome to MILT </h2>
-            <div className="text-base text-secondary mb-2">
-              <p>
+            <div className="text-base text-secondary mb-2 text-black">
+              <p className='text-black'>
                 Would you like to look at your progress
               </p>
             </div>            
