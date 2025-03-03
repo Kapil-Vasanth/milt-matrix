@@ -3,10 +3,14 @@ import { getClerkUser, updateClerkUser } from "@/app/actions";
 import { useActionState, useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
+const initialState = {
+  message: "",
+};
+
 function EditUserPage() {
     const [user, setUser] = useState<{ id: string; firstName: string | null; lastName: string | null; publicMetadata?: { role?: string } } | null>(null);
     const { userId } = useParams();
-    const [state, formAction] = useActionState(updateClerkUser, { message: "" });
+    const [state, formAction] = useActionState(updateClerkUser, initialState);
 
     useEffect(() => {
         const fetchUser = async () => {

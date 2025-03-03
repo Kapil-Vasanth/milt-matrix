@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import '@xyflow/react/dist/style.css';
+import PrelineScript from "./components/PrelineScript";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
               <SignUp />
             </div>
           </SignedOut>
+          <PrelineScript />
         </body>
       </html>
     </ClerkProvider>

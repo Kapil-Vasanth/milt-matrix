@@ -46,6 +46,7 @@ export default async function ProfilePage({ params }: { params: Record<string, s
           </div>
           <span className="block text-sm text-gray-500 dark:text-neutral-500">{userProfile.emailAddress}</span>
         </div>
+        
       </div>
     </div>
   );

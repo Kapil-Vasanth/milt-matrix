@@ -82,8 +82,10 @@ async function deleteClerkUser(userId: string) {
 }
 
 async function updateClerkUser(
+  prevState: any,
   formData: FormData
 ) {
+  console.log(formData)
   try {
     const firstName = formData.get("firstName") as string;
     const lastName = formData.get("lastName") as string;
@@ -98,7 +100,7 @@ async function updateClerkUser(
     const user = await clerkClient.users.updateUser(userId, {
       firstName,
       lastName,
-      password,
+      ...(password ? { password } : {})
     });
     console.log("user updated successfully")
     revalidatePath("/");
