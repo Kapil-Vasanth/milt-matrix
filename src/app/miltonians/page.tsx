@@ -2,6 +2,7 @@ import { createClerkClient, User } from "@clerk/nextjs/server";
 import Image from "next/image";
 import Link from "next/link";
 import CreateUserForm from "../components/CreateUserForm";
+import { deleteClerkUser } from "../actions";
 
 const clerkClient = createClerkClient({ secretKey: process.env.CLERK_SECRET_KEY })
 
@@ -91,7 +92,11 @@ export default async function Miltonians() {
                       </div>
                     </th>
 
-                    <th scope="col" className="px-6 py-3 text-end"></th>
+                    <th scope="col" className="px-6 py-3 text-center">
+                      <div>
+                      <span >Actions</span>
+                      </div>
+                    </th>
                   </tr>
                 </thead>
 
@@ -121,7 +126,7 @@ export default async function Miltonians() {
                             height={38}
                           />
                           <div className="grow">
-                            <Link href='./miltonians/profile/durai'><span className="block text-sm font-semibold text-gray-800 dark:text-neutral-200">
+                            <Link href={`./miltonians/profile/${user.id}`} ><span className="block text-sm font-semibold text-gray-800 dark:text-neutral-200">
                               {user.firstName} {user.lastName}
                             </span></Link>
                             <span className="block text-sm text-gray-500 dark:text-neutral-500">
@@ -176,20 +181,28 @@ export default async function Miltonians() {
                     <td className="size-px whitespace-nowrap">
                       <div className="px-6 py-3">
                         <span className="text-sm text-gray-500 dark:text-neutral-500">
-                          {new Date(user.createdAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                          {new Date(user.createdAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}
                         </span>
                       </div>
                     </td>
                     <td className="size-px whitespace-nowrap">
-                      <div className="px-6 py-1.5">
-                        <a
-                          className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
-                          href="#"
-                        >
-                          {/* <Link to={"christina"}>Edit</Link> */}
-                        </a>
+                      <div className="px-6 py-1.5 flex gap-2">
+                        
+                          <Link href={`./miltonians/edituser/${user.id}`} className="text-sm bg-blue-500 text-white rounded-lg px-2 py-1">
+                            edit
+                          </Link>
+                          <form action={async () => {
+                            'use server';
+                            await deleteClerkUser(user.id);
+                          }}>
+                            <button className="text-sm dark:text-red-500 bg-red-500 text-white rounded-lg px-2 py-1">
+                              delete
+                            </button>
+                          </form>
+                        
                       </div>
                     </td>
+                    
                   </tr>
                   ))}
 

@@ -11,7 +11,6 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogCancel,
-  AlertDialogAction,
 } from "@/components/ui/alert-dialog";
 
 export default function CreateUserForm() {
@@ -20,7 +19,7 @@ export default function CreateUserForm() {
 
   return (
     <AlertDialog>
-      <AlertDialogTrigger className="border px-3 py-2 rounded hover:bg-gray-100">Add Miltonian</AlertDialogTrigger>
+      <AlertDialogTrigger className="border border-gray-500 px-3 py-2 rounded hover:bg-gray-100 text-xs font-semibold">Add Miltonian</AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Create a New User</AlertDialogTitle>
@@ -81,9 +80,9 @@ export default function CreateUserForm() {
 
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction type="submit">
+            <button type="submit">
               Create User
-            </AlertDialogAction>
+            </button>
           </AlertDialogFooter>
         </form>
 
